@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Starwars</title>
+        <link rel="stylesheet" href="assets/normalize.css" />
+        <style>
+            * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  color: black;
+}
+h1 {
+    font-size: x-large;
+    color: yellow;
+    align-self: center;
+    padding: 1rem;
+}
+.body {
+  background-color:lightslategray;
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25%;
+}
+
+#container {
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 2vw;
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  background-color:lightgreen;
+  width: 80%;
+  margin: 1vh auto;
+  padding: 1vw;
+  border-radius: 0.5rem;
+  padding: 2vw;
+  display: flex;
+  text-align: center;
+  font-size: larger;
+}
+
+
+#button {
+  background-color: yellow;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  padding: 10px;
+  background-color: lightgreen;
+  width: 80%;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.img {
+  height: 20vh;}
+        </style>
+	</head>
+	<body class="body">
+		<div id="container">
+            <h1>Начать поиск!</h1>
+			<div id="input">
+				<select id="selector" class="field">
+					<option value="" id="empty" >Выберите категорию</option>
+					<option value="films" id="films">Фильм (всего 6)</option>
+					<option value="people" id="people">Персонаж (всего 83)</option>
+					<option value="planets" id="planets">Планета (всего 60)</option>
+					<option value="species" id="species">Раса (всего 37)</option>
+					<option value="starships" id="starships">Космический корабль (всего 17)</option>
+					<option value="vehicles" id="vehicles">Транспортное средство (всего 38)</option>
+				</select>
+				<input type="number" id="number" min="1" placeholder="Введите число" class="field"/>
+				<button id="button" class="field">Получить данные</button>
+			</div>
+			<div id="result">
+				<p>Результат поиска</p>
+			</div>
+			
+		</div>
+		<script src="/starwars.js"></script>
+	</body>
+</html>
